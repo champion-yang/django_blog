@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    博客标题
+{% endblock %}
+
+{% block content %}
+    <div class="row text-center vertical-middle-sm">
+        <h1>小北的博客</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-mo-8">
+            <ul>
+                {% for blog in blogs %}
+                    <li>
+                        <a href="{{ blog.id }}">{{ blog.title }}</a>
+
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-xs-6 col-mo-4">
+            <h2>广告</h2>
+            <p>和我一起学python</p>
+        </div>
+    </div>
+{% endblock %}
