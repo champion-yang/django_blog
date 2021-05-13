@@ -11,6 +11,7 @@ from blog.views import *
 
 
 urlpatterns = [
-    path('title', blog_title, name='blog_title'),
+    path('', blog_title, name='blog_title'),
+    # path('title', blog_title, name='blog_title'),
     path('<int:article_id>', blog_aritcle, name='blog_aritcle'),
 ]
