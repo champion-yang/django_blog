@@ -138,3 +138,6 @@ DEFAULT_FROM_EMAIL = ""
 
 # 调试模式下可以直接在控制台进行邮箱内容的打印，生产模式下需要注释
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# 设置 iframe 内容展示
+X_FRAME_OPTIONS = 'SAMEORIGIN'

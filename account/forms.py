@@ -6,7 +6,7 @@
 """
 from django import forms
 from django.contrib.auth.models import User
-from .models import UserProfile
+from .models import UserProfile, UserInfo
 
 """
 如果要将表单中的数据写入数据库或者修改记录的值，就要让表单继承 ModelForm，如果提交表单后，不会对数据库中的数据做修改，则使用 Form
@@ -42,3 +42,16 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('phone', 'birth')
+
+
+class UserForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('email', )
+
+
+class UserInfoForm(forms.ModelForm):
+    class Meta:
+        model = UserInfo
+        fields = ("school", "company", "profession", "address", "aboutme", 'photo')
+
