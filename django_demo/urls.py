@@ -22,5 +22,7 @@ urlpatterns = [
     path('blog/', include('blog.urls'), name='blog'),
     path('account/', include(('account.urls', 'account'), namespace='account_url')),
     path('', include('account.urls'), name='account'),
+    # path('pwd_reset', include('password_reset.urls'), name='pwd_reset'),
+    path('password-reset/', include('password_reset.urls')),
 
 ]
