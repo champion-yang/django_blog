@@ -19,9 +19,11 @@ from django.conf.urls import url, include
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
-    path('blog/', include('blog.urls'), name='blog'),
+    path('blog/', include(('blog.urls', 'blog'), namespace='blog')),
     path('account/', include(('account.urls', 'account'), namespace='account_url')),
     path('', include('account.urls'), name='account'),
     path('password-reset/', include('password_reset.urls')),
+    # path('article/', include('article.urls')),
+    path('article/', include(('article.urls', 'article'), namespace='article')),
 
 ]
