@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .models import BlogArticles
 # Create your views here.
 
+import logging
+logger = logging.getLogger(__name__)
 
 def blog_title(request):
     blogs = BlogArticles.objects.all()

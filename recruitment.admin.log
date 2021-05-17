@@ -1,0 +1,5 @@
+2021-05-15 15:46:10,256 django.utils.autoreload 636 INFO     Watching for file changes with StatReloader
+2021-05-15 15:48:13,355 django.utils.autoreload 636 INFO     Watching for file changes with StatReloader
+2021-05-15 15:48:36,986 __name__     11 INFO     这是第一个日志
+2021-05-15 15:49:20,715 django.utils.autoreload 636 INFO     Watching for file changes with StatReloader
+2021-05-15 15:49:25,737 blog.views   11 INFO     这是第一个日志
